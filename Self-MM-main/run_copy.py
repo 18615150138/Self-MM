@@ -126,7 +126,11 @@ def run_normal(args):
         logger.info(args)
         # runnning
         args.cur_time = i+1
+        start_time=time.time()
         test_results = run(args)
+        end_time=time.time()
+        elapsed_time = end_time - start_time
+        print(f"now seed is:{seed} whole train_valid_test time: {elapsed_time} seconds")
         # restore results
         model_results.append(test_results)
 
@@ -197,11 +201,13 @@ def parse_args():
                         help='path to save results.')
     parser.add_argument('--gpu_ids', type=list, default=[0],
                         help='indicates the gpus will be used. If none, the most-free gpu will be used!')
+
+
     parser.add_argument('--annealing_step', type=int, default=50, metavar='N',
                         help='gradually increase the value of lambda from 0 to 1')
     parser.add_argument('--gamma', type=int, default=1,
                         help='gamma')
-    parser.add_argument('--epochs', type=int, default=200,
+    parser.add_argument('--epochs', type=int, default=100,
                         help='epochs')
     return parser.parse_args()
 

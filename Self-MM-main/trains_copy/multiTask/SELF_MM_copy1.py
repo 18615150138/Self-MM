@@ -64,9 +64,12 @@ class SELF_MM():
                 if phase == "train":
                     print('now is batch_size train')
                     model.train()
+                    num_correct, num_sample = 0, 0
                     with tqdm(dataloader['train']) as td:
                         for batch_data in td:
-                            Y = batch_data['labels']['M'].to(self.args.device).long()
+                            train_batch_data=batch_data
+                            Y = batch_data['labels']['M'].to(self.args.device).long().squeeze()
+                            #print('Y',Y)
                             vision = batch_data['vision'].to(self.args.device)
                             audio = batch_data['audio'].to(self.args.device)
                             text = batch_data['text'].to(self.args.device)
@@ -79,58 +82,70 @@ class SELF_MM():
                                 vision_lengths = batch_data['vision_lengths'].to(self.args.device)
                             else:
                                 audio_lengths, vision_lengths = 0, 0
-
+        
                             evidences, evidence_a = model(text, (audio, audio_lengths), (vision, vision_lengths))
+                            _, Y_pre = torch.max(evidence_a, dim=1)
+                            num_correct += (Y_pre == Y).sum().item()
+                            num_sample += Y.shape[0]
+                            #print('Y_pre',Y_pre)
+                            # print('evidences', evidences)
+                            # print('evidence_a', evidence_a)
+
                             loss = get_loss(evidences, evidence_a, Y, epoch, num_classes=3, annealing_step=annealing_step, gamma=gamma,device=device)
                             optimizer.zero_grad()
                             loss.backward()
                             optimizer.step()
+                        print('train:','num_correct:', num_correct, 'num_sample', num_sample)  # 出问题了这里，晚上再debug
+                        acc = num_correct / num_sample
+                        print('train acc:',acc)
                 elif phase == "valid":
                     print('now is batch_size valid')
                     model.eval()
                     num_correct, num_sample = 0, 0
-                    with tqdm(dataloader['valid']) as td:
-                        for batch_data in td:
-                            Y = batch_data['labels']['M'].to(self.args.device).long()
-                            vision = batch_data['vision'].to(self.args.device)
-                            audio = batch_data['audio'].to(self.args.device)
-                            text = batch_data['text'].to(self.args.device)
-                            #indexes = batch_data['index'].view(-1)
-                            #cur_id = batch_data['id']
-                            #ids.extend(cur_id)
+                    with torch.no_grad():
+                        with tqdm(dataloader['valid']) as td:
+                            for batch_data in td:
+                                valid_batch_data=batch_data
+                                Y = batch_data['labels']['M'].to(self.args.device).long().squeeze()
+                                vision = batch_data['vision'].to(self.args.device)
+                                audio = batch_data['audio'].to(self.args.device)
+                                text = batch_data['text'].to(self.args.device)
+                                #indexes = batch_data['index'].view(-1)
+                                #cur_id = batch_data['id']
+                                #ids.extend(cur_id)
 
-                            if not self.args.need_data_aligned:
-                                audio_lengths = batch_data['audio_lengths'].to(self.args.device)
-                                vision_lengths = batch_data['vision_lengths'].to(self.args.device)
-                            else:
-                                audio_lengths, vision_lengths = 0, 0
+                                if not self.args.need_data_aligned:
+                                    audio_lengths = batch_data['audio_lengths'].to(self.args.device)
+                                    vision_lengths = batch_data['vision_lengths'].to(self.args.device)
+                                else:
+                                    audio_lengths, vision_lengths = 0, 0
 
-                            with torch.no_grad():
                                 evidences, evidence_a = model(text, (audio, audio_lengths), (vision, vision_lengths))
                                 _, Y_pre = torch.max(evidence_a, dim=1)
                                 num_correct += (Y_pre == Y).sum().item()
                                 num_sample += Y.shape[0]
-                        print('num_correct:',num_correct,'num_sample',num_sample) #出问题了这里，晚上再debug
-                        acc = num_correct / num_sample
-                        if acc > acc_max:
-                            acc_max = acc
-                            acc_max_epoch = epoch
-                            # save model
-                            torch.save(model.cpu().state_dict(), self.args.model_save_path)
-                            model.to(self.args.device)
+                            print('num_correct:',num_correct,'num_sample',num_sample) #出问题了这里，晚上再debug
+                            acc = num_correct / num_sample
+                            if acc > acc_max:
+                                acc_max = acc
+                                acc_max_epoch = epoch
+                                # save model
+                                torch.save(model.cpu().state_dict(), self.args.model_save_path)
+                                model.to(self.args.device)
 
             print('====> acc_max: {:.4f}'.format(acc_max))
 
         return acc_max
 
     def do_test(self, model, dataloader):
-        print('now is all test')
+        print('now is test')
         model.eval()
         num_correct, num_sample = 0, 0
-        with torch.no_grad():
-            with tqdm(dataloader) as td:
+        with torch.no_grad(): #这个放外面更好
+            with tqdm(dataloader['test']) as td:
                 for batch_data in td:
-                    Y = batch_data['labels']['M'].to(self.args.device).long()
+
+                    Y = batch_data['labels']['M'].to(self.args.device).long().squeeze()       #这里出了点问题！！！！！！！！！
                     vision = batch_data['vision'].to(self.args.device)
                     audio = batch_data['audio'].to(self.args.device)
                     text = batch_data['text'].to(self.args.device)
@@ -139,9 +154,12 @@ class SELF_MM():
                         vision_lengths = batch_data['vision_lengths'].to(self.args.device)
                     else:
                         audio_lengths, vision_lengths = 0, 0
+
                     evidences, evidence_a = model(text, (audio, audio_lengths), (vision, vision_lengths))
                     _, Y_pre = torch.max(evidence_a, dim=1)
                     num_correct += (Y_pre == Y).sum().item()
                     num_sample += Y.shape[0]
                 acc_test = num_correct / num_sample
         return acc_test
+
+
