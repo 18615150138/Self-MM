@@ -1,0 +1,301 @@
+Epoch,Phase,Num Correct,Num Sample,Accuracy,Loss
+1,train,480,1368,0.3508771929824561,"tensor(0.8348, device='cuda:0', grad_fn=<DivBackward0>)"
+1,valid,183,456,0.40131578947368424,"tensor(0.8006, device='cuda:0')"
+1,overall,,,0.40131578947368424
+2,train,460,1368,0.3362573099415205,"tensor(0.8313, device='cuda:0', grad_fn=<DivBackward0>)"
+2,valid,175,456,0.38377192982456143,"tensor(0.8175, device='cuda:0')"
+2,overall,,,0.40131578947368424
+3,train,500,1368,0.3654970760233918,"tensor(0.8338, device='cuda:0', grad_fn=<DivBackward0>)"
+3,valid,225,456,0.4934210526315789,"tensor(0.8250, device='cuda:0')"
+3,overall,,,0.4934210526315789
+4,train,501,1368,0.36622807017543857,"tensor(0.8401, device='cuda:0', grad_fn=<DivBackward0>)"
+4,valid,192,456,0.42105263157894735,"tensor(0.8291, device='cuda:0')"
+4,overall,,,0.4934210526315789
+5,train,548,1368,0.40058479532163743,"tensor(0.8482, device='cuda:0', grad_fn=<DivBackward0>)"
+5,valid,235,456,0.5153508771929824,"tensor(0.8372, device='cuda:0')"
+5,overall,,,0.5153508771929824
+6,train,563,1368,0.41154970760233917,"tensor(0.8561, device='cuda:0', grad_fn=<DivBackward0>)"
+6,valid,178,456,0.39035087719298245,"tensor(0.8523, device='cuda:0')"
+6,overall,,,0.5153508771929824
+7,train,580,1368,0.4239766081871345,"tensor(0.8661, device='cuda:0', grad_fn=<DivBackward0>)"
+7,valid,175,456,0.38377192982456143,"tensor(0.8600, device='cuda:0')"
+7,overall,,,0.5153508771929824
+8,train,657,1368,0.48026315789473684,"tensor(0.8741, device='cuda:0', grad_fn=<DivBackward0>)"
+8,valid,239,456,0.5241228070175439,"tensor(0.8648, device='cuda:0')"
+8,overall,,,0.5241228070175439
+9,train,658,1368,0.48099415204678364,"tensor(0.8862, device='cuda:0', grad_fn=<DivBackward0>)"
+9,valid,223,456,0.48903508771929827,"tensor(0.8860, device='cuda:0')"
+9,overall,,,0.5241228070175439
+10,train,687,1368,0.5021929824561403,"tensor(0.8962, device='cuda:0', grad_fn=<DivBackward0>)"
+10,valid,239,456,0.5241228070175439,"tensor(0.8953, device='cuda:0')"
+10,overall,,,0.5241228070175439
+11,train,686,1368,0.5014619883040936,"tensor(0.9058, device='cuda:0', grad_fn=<DivBackward0>)"
+11,valid,244,456,0.5350877192982456,"tensor(0.9016, device='cuda:0')"
+11,overall,,,0.5350877192982456
+12,train,701,1368,0.5124269005847953,"tensor(0.9162, device='cuda:0', grad_fn=<DivBackward0>)"
+12,valid,248,456,0.543859649122807,"tensor(0.9117, device='cuda:0')"
+12,overall,,,0.543859649122807
+13,train,712,1368,0.52046783625731,"tensor(0.9261, device='cuda:0', grad_fn=<DivBackward0>)"
+13,valid,244,456,0.5350877192982456,"tensor(0.9270, device='cuda:0')"
+13,overall,,,0.543859649122807
+14,train,723,1368,0.5285087719298246,"tensor(0.9351, device='cuda:0', grad_fn=<DivBackward0>)"
+14,valid,246,456,0.5394736842105263,"tensor(0.9408, device='cuda:0')"
+14,overall,,,0.543859649122807
+15,train,729,1368,0.5328947368421053,"tensor(0.9451, device='cuda:0', grad_fn=<DivBackward0>)"
+15,valid,248,456,0.543859649122807,"tensor(0.9471, device='cuda:0')"
+15,overall,,,0.543859649122807
+16,train,731,1368,0.5343567251461988,"tensor(0.9557, device='cuda:0', grad_fn=<DivBackward0>)"
+16,valid,230,456,0.5043859649122807,"tensor(0.9488, device='cuda:0')"
+16,overall,,,0.543859649122807
+17,train,729,1368,0.5328947368421053,"tensor(0.9657, device='cuda:0', grad_fn=<DivBackward0>)"
+17,valid,248,456,0.543859649122807,"tensor(0.9663, device='cuda:0')"
+17,overall,,,0.543859649122807
+18,train,736,1368,0.5380116959064327,"tensor(0.9755, device='cuda:0', grad_fn=<DivBackward0>)"
+18,valid,248,456,0.543859649122807,"tensor(0.9811, device='cuda:0')"
+18,overall,,,0.543859649122807
+19,train,741,1368,0.5416666666666666,"tensor(0.9857, device='cuda:0', grad_fn=<DivBackward0>)"
+19,valid,248,456,0.543859649122807,"tensor(0.9915, device='cuda:0')"
+19,overall,,,0.543859649122807
+20,train,735,1368,0.5372807017543859,"tensor(0.9955, device='cuda:0', grad_fn=<DivBackward0>)"
+20,valid,248,456,0.543859649122807,"tensor(0.9979, device='cuda:0')"
+20,overall,,,0.543859649122807
+21,train,742,1368,0.5423976608187134,"tensor(0.9933, device='cuda:0', grad_fn=<DivBackward0>)"
+21,valid,248,456,0.543859649122807,"tensor(0.9988, device='cuda:0')"
+21,overall,,,0.543859649122807
+22,train,746,1368,0.5453216374269005,"tensor(0.9919, device='cuda:0', grad_fn=<DivBackward0>)"
+22,valid,248,456,0.543859649122807,"tensor(1.0024, device='cuda:0')"
+22,overall,,,0.543859649122807
+23,train,813,1368,0.5942982456140351,"tensor(0.9886, device='cuda:0', grad_fn=<DivBackward0>)"
+23,valid,141,456,0.3092105263157895,"tensor(1.0873, device='cuda:0')"
+23,overall,,,0.543859649122807
+24,train,889,1368,0.6498538011695907,"tensor(0.9824, device='cuda:0', grad_fn=<DivBackward0>)"
+24,valid,196,456,0.4298245614035088,"tensor(1.0250, device='cuda:0')"
+24,overall,,,0.543859649122807
+25,train,952,1368,0.695906432748538,"tensor(0.9742, device='cuda:0', grad_fn=<DivBackward0>)"
+25,valid,153,456,0.3355263157894737,"tensor(1.1242, device='cuda:0')"
+25,overall,,,0.543859649122807
+26,train,1004,1368,0.7339181286549707,"tensor(0.9669, device='cuda:0', grad_fn=<DivBackward0>)"
+26,valid,163,456,0.3574561403508772,"tensor(0.9974, device='cuda:0')"
+26,overall,,,0.543859649122807
+27,train,1072,1368,0.783625730994152,"tensor(0.9594, device='cuda:0', grad_fn=<DivBackward0>)"
+27,valid,246,456,0.5394736842105263,"tensor(1.0125, device='cuda:0')"
+27,overall,,,0.543859649122807
+28,train,1052,1368,0.7690058479532164,"tensor(0.9568, device='cuda:0', grad_fn=<DivBackward0>)"
+28,valid,241,456,0.5285087719298246,"tensor(0.9907, device='cuda:0')"
+28,overall,,,0.543859649122807
+29,train,1065,1368,0.7785087719298246,"tensor(0.9535, device='cuda:0', grad_fn=<DivBackward0>)"
+29,valid,237,456,0.5197368421052632,"tensor(0.9984, device='cuda:0')"
+29,overall,,,0.543859649122807
+30,train,1077,1368,0.7872807017543859,"tensor(0.9494, device='cuda:0', grad_fn=<DivBackward0>)"
+30,valid,217,456,0.4758771929824561,"tensor(1.0147, device='cuda:0')"
+30,overall,,,0.543859649122807
+31,train,1077,1368,0.7872807017543859,"tensor(0.9445, device='cuda:0', grad_fn=<DivBackward0>)"
+31,valid,222,456,0.4868421052631579,"tensor(0.9950, device='cuda:0')"
+31,overall,,,0.543859649122807
+32,train,1111,1368,0.8121345029239766,"tensor(0.9401, device='cuda:0', grad_fn=<DivBackward0>)"
+32,valid,229,456,0.5021929824561403,"tensor(1.0093, device='cuda:0')"
+32,overall,,,0.543859649122807
+33,train,1119,1368,0.8179824561403509,"tensor(0.9376, device='cuda:0', grad_fn=<DivBackward0>)"
+33,valid,199,456,0.43640350877192985,"tensor(1.0410, device='cuda:0')"
+33,overall,,,0.543859649122807
+34,train,1139,1368,0.8326023391812866,"tensor(0.9322, device='cuda:0', grad_fn=<DivBackward0>)"
+34,valid,256,456,0.5614035087719298,"tensor(0.9805, device='cuda:0')"
+34,overall,,,0.5614035087719298
+35,train,1207,1368,0.8823099415204678,"tensor(0.9224, device='cuda:0', grad_fn=<DivBackward0>)"
+35,valid,232,456,0.5087719298245614,"tensor(1.0025, device='cuda:0')"
+35,overall,,,0.5614035087719298
+36,train,1222,1368,0.8932748538011696,"tensor(0.9181, device='cuda:0', grad_fn=<DivBackward0>)"
+36,valid,236,456,0.5175438596491229,"tensor(1.0062, device='cuda:0')"
+36,overall,,,0.5614035087719298
+37,train,1256,1368,0.9181286549707602,"tensor(0.9134, device='cuda:0', grad_fn=<DivBackward0>)"
+37,valid,239,456,0.5241228070175439,"tensor(0.9865, device='cuda:0')"
+37,overall,,,0.5614035087719298
+38,train,1260,1368,0.9210526315789473,"tensor(0.9096, device='cuda:0', grad_fn=<DivBackward0>)"
+38,valid,244,456,0.5350877192982456,"tensor(0.9883, device='cuda:0')"
+38,overall,,,0.5614035087719298
+39,train,1273,1368,0.9305555555555556,"tensor(0.9088, device='cuda:0', grad_fn=<DivBackward0>)"
+39,valid,254,456,0.5570175438596491,"tensor(0.9861, device='cuda:0')"
+39,overall,,,0.5614035087719298
+40,train,1280,1368,0.935672514619883,"tensor(0.9066, device='cuda:0', grad_fn=<DivBackward0>)"
+40,valid,248,456,0.543859649122807,"tensor(0.9834, device='cuda:0')"
+40,overall,,,0.5614035087719298
+41,train,1286,1368,0.9400584795321637,"tensor(0.9030, device='cuda:0', grad_fn=<DivBackward0>)"
+41,valid,243,456,0.5328947368421053,"tensor(0.9885, device='cuda:0')"
+41,overall,,,0.5614035087719298
+42,train,1297,1368,0.9480994152046783,"tensor(0.9022, device='cuda:0', grad_fn=<DivBackward0>)"
+42,valid,237,456,0.5197368421052632,"tensor(1.0004, device='cuda:0')"
+42,overall,,,0.5614035087719298
+43,train,1298,1368,0.9488304093567251,"tensor(0.8996, device='cuda:0', grad_fn=<DivBackward0>)"
+43,valid,242,456,0.5307017543859649,"tensor(0.9958, device='cuda:0')"
+43,overall,,,0.5614035087719298
+44,train,1291,1368,0.9437134502923976,"tensor(0.8993, device='cuda:0', grad_fn=<DivBackward0>)"
+44,valid,211,456,0.46271929824561403,"tensor(1.0301, device='cuda:0')"
+44,overall,,,0.5614035087719298
+45,train,1299,1368,0.9495614035087719,"tensor(0.8976, device='cuda:0', grad_fn=<DivBackward0>)"
+45,valid,242,456,0.5307017543859649,"tensor(0.9935, device='cuda:0')"
+45,overall,,,0.5614035087719298
+46,train,1307,1368,0.9554093567251462,"tensor(0.8951, device='cuda:0', grad_fn=<DivBackward0>)"
+46,valid,236,456,0.5175438596491229,"tensor(1.0216, device='cuda:0')"
+46,overall,,,0.5614035087719298
+47,train,1301,1368,0.9510233918128655,"tensor(0.8945, device='cuda:0', grad_fn=<DivBackward0>)"
+47,valid,230,456,0.5043859649122807,"tensor(1.0065, device='cuda:0')"
+47,overall,,,0.5614035087719298
+48,train,1304,1368,0.9532163742690059,"tensor(0.8938, device='cuda:0', grad_fn=<DivBackward0>)"
+48,valid,246,456,0.5394736842105263,"tensor(0.9909, device='cuda:0')"
+48,overall,,,0.5614035087719298
+49,train,1314,1368,0.9605263157894737,"tensor(0.8927, device='cuda:0', grad_fn=<DivBackward0>)"
+49,valid,236,456,0.5175438596491229,"tensor(1.0038, device='cuda:0')"
+49,overall,,,0.5614035087719298
+50,train,1313,1368,0.9597953216374269,"tensor(0.8912, device='cuda:0', grad_fn=<DivBackward0>)"
+50,valid,242,456,0.5307017543859649,"tensor(0.9895, device='cuda:0')"
+50,overall,,,0.5614035087719298
+51,train,1314,1368,0.9605263157894737,"tensor(0.8905, device='cuda:0', grad_fn=<DivBackward0>)"
+51,valid,240,456,0.5263157894736842,"tensor(0.9483, device='cuda:0')"
+51,overall,,,0.5614035087719298
+52,train,1323,1368,0.9671052631578947,"tensor(0.8894, device='cuda:0', grad_fn=<DivBackward0>)"
+52,valid,238,456,0.5219298245614035,"tensor(0.9878, device='cuda:0')"
+52,overall,,,0.5614035087719298
+53,train,1303,1368,0.952485380116959,"tensor(0.8898, device='cuda:0', grad_fn=<DivBackward0>)"
+53,valid,245,456,0.5372807017543859,"tensor(0.9870, device='cuda:0')"
+53,overall,,,0.5614035087719298
+54,train,1328,1368,0.9707602339181286,"tensor(0.8854, device='cuda:0', grad_fn=<DivBackward0>)"
+54,valid,220,456,0.4824561403508772,"tensor(1.0164, device='cuda:0')"
+54,overall,,,0.5614035087719298
+55,train,1326,1368,0.9692982456140351,"tensor(0.8834, device='cuda:0', grad_fn=<DivBackward0>)"
+55,valid,239,456,0.5241228070175439,"tensor(0.9950, device='cuda:0')"
+55,overall,,,0.5614035087719298
+56,train,1316,1368,0.9619883040935673,"tensor(0.8842, device='cuda:0', grad_fn=<DivBackward0>)"
+56,valid,245,456,0.5372807017543859,"tensor(0.9866, device='cuda:0')"
+56,overall,,,0.5614035087719298
+57,train,1323,1368,0.9671052631578947,"tensor(0.8826, device='cuda:0', grad_fn=<DivBackward0>)"
+57,valid,242,456,0.5307017543859649,"tensor(0.9870, device='cuda:0')"
+57,overall,,,0.5614035087719298
+58,train,1327,1368,0.9700292397660819,"tensor(0.8811, device='cuda:0', grad_fn=<DivBackward0>)"
+58,valid,239,456,0.5241228070175439,"tensor(0.9876, device='cuda:0')"
+58,overall,,,0.5614035087719298
+59,train,1330,1368,0.9722222222222222,"tensor(0.8817, device='cuda:0', grad_fn=<DivBackward0>)"
+59,valid,226,456,0.4956140350877193,"tensor(1.0141, device='cuda:0')"
+59,overall,,,0.5614035087719298
+60,train,1319,1368,0.9641812865497076,"tensor(0.8812, device='cuda:0', grad_fn=<DivBackward0>)"
+60,valid,249,456,0.5460526315789473,"tensor(0.9765, device='cuda:0')"
+60,overall,,,0.5614035087719298
+61,train,1330,1368,0.9722222222222222,"tensor(0.8779, device='cuda:0', grad_fn=<DivBackward0>)"
+61,valid,245,456,0.5372807017543859,"tensor(0.9754, device='cuda:0')"
+61,overall,,,0.5614035087719298
+62,train,1339,1368,0.9788011695906432,"tensor(0.8766, device='cuda:0', grad_fn=<DivBackward0>)"
+62,valid,243,456,0.5328947368421053,"tensor(0.9807, device='cuda:0')"
+62,overall,,,0.5614035087719298
+63,train,1338,1368,0.9780701754385965,"tensor(0.8743, device='cuda:0', grad_fn=<DivBackward0>)"
+63,valid,233,456,0.5109649122807017,"tensor(0.9844, device='cuda:0')"
+63,overall,,,0.5614035087719298
+64,train,1334,1368,0.9751461988304093,"tensor(0.8743, device='cuda:0', grad_fn=<DivBackward0>)"
+64,valid,242,456,0.5307017543859649,"tensor(0.9857, device='cuda:0')"
+64,overall,,,0.5614035087719298
+65,train,1329,1368,0.9714912280701754,"tensor(0.8740, device='cuda:0', grad_fn=<DivBackward0>)"
+65,valid,255,456,0.5592105263157895,"tensor(0.9731, device='cuda:0')"
+65,overall,,,0.5614035087719298
+66,train,1334,1368,0.9751461988304093,"tensor(0.8705, device='cuda:0', grad_fn=<DivBackward0>)"
+66,valid,247,456,0.5416666666666666,"tensor(0.9736, device='cuda:0')"
+66,overall,,,0.5614035087719298
+67,train,1337,1368,0.9773391812865497,"tensor(0.8698, device='cuda:0', grad_fn=<DivBackward0>)"
+67,valid,245,456,0.5372807017543859,"tensor(0.9919, device='cuda:0')"
+67,overall,,,0.5614035087719298
+68,train,1331,1368,0.972953216374269,"tensor(0.8702, device='cuda:0', grad_fn=<DivBackward0>)"
+68,valid,252,456,0.5526315789473685,"tensor(0.9765, device='cuda:0')"
+68,overall,,,0.5614035087719298
+69,train,1318,1368,0.9634502923976608,"tensor(0.8698, device='cuda:0', grad_fn=<DivBackward0>)"
+69,valid,244,456,0.5350877192982456,"tensor(0.9795, device='cuda:0')"
+69,overall,,,0.5614035087719298
+70,train,1339,1368,0.9788011695906432,"tensor(0.8668, device='cuda:0', grad_fn=<DivBackward0>)"
+70,valid,246,456,0.5394736842105263,"tensor(0.9896, device='cuda:0')"
+70,overall,,,0.5614035087719298
+71,train,1328,1368,0.9707602339181286,"tensor(0.8668, device='cuda:0', grad_fn=<DivBackward0>)"
+71,valid,248,456,0.543859649122807,"tensor(0.9758, device='cuda:0')"
+71,overall,,,0.5614035087719298
+72,train,1318,1368,0.9634502923976608,"tensor(0.8671, device='cuda:0', grad_fn=<DivBackward0>)"
+72,valid,231,456,0.506578947368421,"tensor(0.9911, device='cuda:0')"
+72,overall,,,0.5614035087719298
+73,train,1322,1368,0.966374269005848,"tensor(0.8649, device='cuda:0', grad_fn=<DivBackward0>)"
+73,valid,234,456,0.5131578947368421,"tensor(0.9816, device='cuda:0')"
+73,overall,,,0.5614035087719298
+74,train,1336,1368,0.9766081871345029,"tensor(0.8615, device='cuda:0', grad_fn=<DivBackward0>)"
+74,valid,258,456,0.5657894736842105,"tensor(0.9798, device='cuda:0')"
+74,overall,,,0.5657894736842105
+75,train,1323,1368,0.9671052631578947,"tensor(0.8608, device='cuda:0', grad_fn=<DivBackward0>)"
+75,valid,231,456,0.506578947368421,"tensor(0.9909, device='cuda:0')"
+75,overall,,,0.5657894736842105
+76,train,1328,1368,0.9707602339181286,"tensor(0.8610, device='cuda:0', grad_fn=<DivBackward0>)"
+76,valid,246,456,0.5394736842105263,"tensor(0.9665, device='cuda:0')"
+76,overall,,,0.5657894736842105
+77,train,1343,1368,0.9817251461988304,"tensor(0.8579, device='cuda:0', grad_fn=<DivBackward0>)"
+77,valid,216,456,0.47368421052631576,"tensor(0.9993, device='cuda:0')"
+77,overall,,,0.5657894736842105
+78,train,1336,1368,0.9766081871345029,"tensor(0.8581, device='cuda:0', grad_fn=<DivBackward0>)"
+78,valid,239,456,0.5241228070175439,"tensor(0.9733, device='cuda:0')"
+78,overall,,,0.5657894736842105
+79,train,1340,1368,0.97953216374269,"tensor(0.8572, device='cuda:0', grad_fn=<DivBackward0>)"
+79,valid,249,456,0.5460526315789473,"tensor(0.9752, device='cuda:0')"
+79,overall,,,0.5657894736842105
+80,train,1331,1368,0.972953216374269,"tensor(0.8564, device='cuda:0', grad_fn=<DivBackward0>)"
+80,valid,250,456,0.5482456140350878,"tensor(0.9771, device='cuda:0')"
+80,overall,,,0.5657894736842105
+81,train,1340,1368,0.97953216374269,"tensor(0.8551, device='cuda:0', grad_fn=<DivBackward0>)"
+81,valid,248,456,0.543859649122807,"tensor(0.9850, device='cuda:0')"
+81,overall,,,0.5657894736842105
+82,train,1344,1368,0.9824561403508771,"tensor(0.8522, device='cuda:0', grad_fn=<DivBackward0>)"
+82,valid,253,456,0.5548245614035088,"tensor(0.9663, device='cuda:0')"
+82,overall,,,0.5657894736842105
+83,train,1344,1368,0.9824561403508771,"tensor(0.8523, device='cuda:0', grad_fn=<DivBackward0>)"
+83,valid,240,456,0.5263157894736842,"tensor(0.9745, device='cuda:0')"
+83,overall,,,0.5657894736842105
+84,train,1324,1368,0.9678362573099415,"tensor(0.8528, device='cuda:0', grad_fn=<DivBackward0>)"
+84,valid,231,456,0.506578947368421,"tensor(0.9958, device='cuda:0')"
+84,overall,,,0.5657894736842105
+85,train,1319,1368,0.9641812865497076,"tensor(0.8518, device='cuda:0', grad_fn=<DivBackward0>)"
+85,valid,248,456,0.543859649122807,"tensor(0.9805, device='cuda:0')"
+85,overall,,,0.5657894736842105
+86,train,1337,1368,0.9773391812865497,"tensor(0.8481, device='cuda:0', grad_fn=<DivBackward0>)"
+86,valid,240,456,0.5263157894736842,"tensor(0.9866, device='cuda:0')"
+86,overall,,,0.5657894736842105
+87,train,1338,1368,0.9780701754385965,"tensor(0.8479, device='cuda:0', grad_fn=<DivBackward0>)"
+87,valid,244,456,0.5350877192982456,"tensor(0.9755, device='cuda:0')"
+87,overall,,,0.5657894736842105
+88,train,1340,1368,0.97953216374269,"tensor(0.8473, device='cuda:0', grad_fn=<DivBackward0>)"
+88,valid,252,456,0.5526315789473685,"tensor(0.9607, device='cuda:0')"
+88,overall,,,0.5657894736842105
+89,train,1334,1368,0.9751461988304093,"tensor(0.8473, device='cuda:0', grad_fn=<DivBackward0>)"
+89,valid,252,456,0.5526315789473685,"tensor(0.9797, device='cuda:0')"
+89,overall,,,0.5657894736842105
+90,train,1328,1368,0.9707602339181286,"tensor(0.8468, device='cuda:0', grad_fn=<DivBackward0>)"
+90,valid,251,456,0.5504385964912281,"tensor(0.9667, device='cuda:0')"
+90,overall,,,0.5657894736842105
+91,train,1333,1368,0.9744152046783626,"tensor(0.8434, device='cuda:0', grad_fn=<DivBackward0>)"
+91,valid,246,456,0.5394736842105263,"tensor(0.9587, device='cuda:0')"
+91,overall,,,0.5657894736842105
+92,train,1336,1368,0.9766081871345029,"tensor(0.8417, device='cuda:0', grad_fn=<DivBackward0>)"
+92,valid,244,456,0.5350877192982456,"tensor(0.9817, device='cuda:0')"
+92,overall,,,0.5657894736842105
+93,train,1343,1368,0.9817251461988304,"tensor(0.8400, device='cuda:0', grad_fn=<DivBackward0>)"
+93,valid,237,456,0.5197368421052632,"tensor(0.9886, device='cuda:0')"
+93,overall,,,0.5657894736842105
+94,train,1340,1368,0.97953216374269,"tensor(0.8411, device='cuda:0', grad_fn=<DivBackward0>)"
+94,valid,223,456,0.48903508771929827,"tensor(1.0018, device='cuda:0')"
+94,overall,,,0.5657894736842105
+95,train,1339,1368,0.9788011695906432,"tensor(0.8400, device='cuda:0', grad_fn=<DivBackward0>)"
+95,valid,241,456,0.5285087719298246,"tensor(0.9804, device='cuda:0')"
+95,overall,,,0.5657894736842105
+96,train,1346,1368,0.9839181286549707,"tensor(0.8372, device='cuda:0', grad_fn=<DivBackward0>)"
+96,valid,236,456,0.5175438596491229,"tensor(0.9870, device='cuda:0')"
+96,overall,,,0.5657894736842105
+97,train,1346,1368,0.9839181286549707,"tensor(0.8364, device='cuda:0', grad_fn=<DivBackward0>)"
+97,valid,225,456,0.4934210526315789,"tensor(0.9966, device='cuda:0')"
+97,overall,,,0.5657894736842105
+98,train,1334,1368,0.9751461988304093,"tensor(0.8357, device='cuda:0', grad_fn=<DivBackward0>)"
+98,valid,232,456,0.5087719298245614,"tensor(0.9710, device='cuda:0')"
+98,overall,,,0.5657894736842105
+99,train,1346,1368,0.9839181286549707,"tensor(0.8331, device='cuda:0', grad_fn=<DivBackward0>)"
+99,valid,241,456,0.5285087719298246,"tensor(0.9728, device='cuda:0')"
+99,overall,,,0.5657894736842105
+100,train,1322,1368,0.966374269005848,"tensor(0.8398, device='cuda:0', grad_fn=<DivBackward0>)"
+100,valid,229,456,0.5021929824561403,"tensor(0.9948, device='cuda:0')"
+100,overall,,,0.5657894736842105

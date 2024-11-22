@@ -120,10 +120,12 @@ def run_normal(args):
             config = ConfigRegression(args)
 
         args = config.get_config()
+        print('args.dataPath',args.dataPath)
         setup_seed(seed)
         args.seed = seed
         logger.info('Start running %s...' %(args.modelName))
         logger.info(args)
+
         # runnning
         args.cur_time = i+1
         start_time=time.time()
@@ -131,6 +133,8 @@ def run_normal(args):
         end_time=time.time()
         elapsed_time = end_time - start_time
         print(f"now seed is:{seed} whole train_valid_test time: {elapsed_time} seconds")
+
+
         # restore results
         model_results.append(test_results)
 
@@ -203,12 +207,16 @@ def parse_args():
                         help='indicates the gpus will be used. If none, the most-free gpu will be used!')
 
 
-    parser.add_argument('--annealing_step', type=int, default=50, metavar='N',
+    parser.add_argument('--annealing_step', type=int, default=20, metavar='N',
                         help='gradually increase the value of lambda from 0 to 1')
     parser.add_argument('--gamma', type=int, default=1,
                         help='gamma')
     parser.add_argument('--epochs', type=int, default=100,
                         help='epochs')
+
+
+
+
     return parser.parse_args()
 
 if __name__ == '__main__':
@@ -216,11 +224,11 @@ if __name__ == '__main__':
     print('torch', torch.__version__)
     print('torch.cuda.is_available()', torch.cuda.is_available())
 
-
     args = parse_args()
     logger = set_log(args)
-    for data_name in ['sims', 'mosi', 'mosei']:
+    for data_name in ['sims']:
         args.datasetName = data_name
-        args.seeds = [1111,1112, 1113, 1114, 1115]
+        args.seeds = [1111]
+        #args.seeds = [1111,1112, 1113, 1114, 1115]
 
         run_normal(args)

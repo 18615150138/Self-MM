@@ -94,8 +94,8 @@ class ConfigRegression():
                 'need_data_aligned': False,
                 'need_model_aligned': False,
                 'need_normalized': False,
-                'use_bert': True,
-                'use_finetune': True,
+                'use_bert': True, #使用BERT
+                'use_finetune': True, #BERT开启梯度
                 'save_labels': False,
                 'early_stop': 8,
                 'update_epochs': 4
@@ -106,9 +106,9 @@ class ConfigRegression():
                     # the batch_size of each epoch is update_epochs * batch_size
                     'batch_size': 32,
                     'learning_rate_bert': 5e-5,
-                    'learning_rate_audio': 1e-3,
-                    'learning_rate_video': 1e-4,
-                    'learning_rate_other': 1e-3,
+                    'learning_rate_audio': 5e-5,
+                    'learning_rate_video': 5e-5,
+                    'learning_rate_other': 5e-5,
                     'weight_decay_bert': 0.001,
                     'weight_decay_audio': 0.01,
                     'weight_decay_video': 0.001,
@@ -121,9 +121,9 @@ class ConfigRegression():
                     'text_out': 768, 
                     'audio_out': 16,
                     'video_out': 32, 
-                    'a_lstm_dropout': 0.0,
-                    'v_lstm_dropout': 0.0,
-                    't_bert_dropout':0.1,
+                    'a_lstm_dropout': 0.2,
+                    'v_lstm_dropout': 0.2,
+                    't_bert_dropout':0.2,
                     # post feature
                     'post_fusion_dim': 128,
                     'post_text_dim':64,
@@ -173,10 +173,10 @@ class ConfigRegression():
                 'sims':{
                     # the batch_size of each epoch is update_epochs * batch_size
                     'batch_size': 32,
-                    'learning_rate_bert': 5e-5,
+                    'learning_rate_bert': 2e-5,
                     'learning_rate_audio': 5e-3,
                     'learning_rate_video': 5e-3,
-                    'learning_rate_other': 1e-3,
+                    'learning_rate_other': 1e-4,
                     'weight_decay_bert': 0.001,
                     'weight_decay_audio': 0.01,
                     'weight_decay_video': 0.01,
@@ -189,18 +189,18 @@ class ConfigRegression():
                     'text_out': 768, 
                     'audio_out': 16,
                     'video_out': 32, 
-                    'a_lstm_dropout': 0.0,
-                    'v_lstm_dropout': 0.0,
-                    't_bert_dropout':0.1,
+                    'a_lstm_dropout': 0.2,
+                    'v_lstm_dropout': 0.2,
+                    't_bert_dropout':0.2, #这个没用到
                     # post feature
                     'post_fusion_dim': 128,
                     'post_text_dim':64,
                     'post_audio_dim': 16,
                     'post_video_dim': 32,
-                    'post_fusion_dropout': 0.0,
-                    'post_text_dropout': 0.1,
-                    'post_audio_dropout': 0.1,
-                    'post_video_dropout': 0.0,
+                    'post_fusion_dropout': 0.3, ##这个没用到
+                    'post_text_dropout': 0.3,
+                    'post_audio_dropout': 0.3,
+                    'post_video_dropout': 0.3,
                     # res
                     'H': 1.0
                 },

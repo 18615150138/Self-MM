@@ -52,6 +52,8 @@ def mse_loss(y, alpha, epoch_num, num_classes, annealing_step, device=None, useK
 
 
 def edl_loss(func, y, alpha, epoch_num, num_classes, annealing_step, device, useKL=True):
+
+
     #训练集上五个类别的频数
     #r=np.array([373,249,410,180,156])
     r=np.array([742,207,419])
@@ -64,9 +66,12 @@ def edl_loss(func, y, alpha, epoch_num, num_classes, annealing_step, device, use
 
     y = y.to(device)
     #y是一个（32，5）的one_hot向量组
-
+    y1=y
     alpha = alpha.to(device)
+    alpha1=alpha
+
     S = torch.sum(alpha, dim=1, keepdim=True)
+
     A = torch.sum(y * (func(S) - func(alpha)), dim=1, keepdim=True)
     #A = torch.sum(normalized_weight * y * (func(S) - func(alpha)), dim=1, keepdim=True)
 
@@ -81,39 +86,6 @@ def edl_loss(func, y, alpha, epoch_num, num_classes, annealing_step, device, use
     kl_alpha = (alpha - 1) * (1 - y) + 1
     kl_div = annealing_coef * kl_divergence(kl_alpha, num_classes, device=device)
     return A + kl_div
-
-
-def edl_loss_log(func, y, alpha, epoch_num, num_classes, annealing_step, device, useKL=True):
-    #训练集上五个类别的频数
-    #r=np.array([373,249,410,180,156])
-    r=np.array([742,207,419])
-    # 计算权重
-    weight=1/r
-    # 归一化权重
-    normalized_weight = weight / np.sum(weight)
-    # 确保权重是torch.Tensor类型
-    normalized_weight = torch.tensor(normalized_weight, dtype=torch.float32, device=device)
-
-    y = y.to(device)
-    #y是一个（32，5）的one_hot向量组
-
-    alpha = alpha.to(device)
-    S = torch.sum(alpha, dim=1, keepdim=True)
-    A = torch.sum(y * (func(S) - func(alpha)), dim=1, keepdim=True)
-    #A = torch.sum(normalized_weight * y * (func(S) - func(alpha)), dim=1, keepdim=True)
-
-    if not useKL:
-        return A
-
-    annealing_coef = torch.min(
-        torch.tensor(1.0, dtype=torch.float32),
-        torch.tensor(epoch_num / annealing_step, dtype=torch.float32),
-    )
-
-    kl_alpha = (alpha - 1) * (1 - y) + 1
-    kl_div = annealing_coef * kl_divergence(kl_alpha, num_classes, device=device)
-    return A + kl_div
-
 
 
 def edl_mse_loss(alpha, target, epoch_num, num_classes, annealing_step, device):
@@ -130,9 +102,6 @@ def edl_digamma_loss(alpha, target, epoch_num, num_classes, annealing_step, devi
     loss = edl_loss(torch.digamma, target, alpha, epoch_num, num_classes, annealing_step, device)
     return torch.mean(loss)
 
-def edl_log_loss(alpha, target, epoch_num, num_classes, annealing_step, device):
-    loss = edl_loss_log(torch.log, target, alpha, epoch_num, num_classes, annealing_step, device)
-    return torch.mean(loss)
 
 def get_dc_loss(evidences, device):
     num_views = len(evidences)
@@ -158,55 +127,9 @@ def get_loss(evidences, evidence_a, target, epoch_num, num_classes, annealing_st
     target = F.one_hot(target, num_classes)
     alpha_a = evidence_a + 1
     loss_acc = edl_digamma_loss(alpha_a, target, epoch_num, num_classes, annealing_step, device)
-    #loss_acc = edl_mse_loss(alpha_a, target, epoch_num, num_classes, annealing_step, device)
     for v in range(len(evidences)):
         alpha = evidences[v] + 1
         loss_acc += edl_digamma_loss(alpha, target, epoch_num, num_classes, annealing_step, device)
-        #loss_acc += edl_mse_loss(alpha, target, epoch_num, num_classes, annealing_step, device)
     loss_acc = loss_acc / (len(evidences) + 1)
     loss = loss_acc + gamma * get_dc_loss(evidences, device)
-
-    return loss
-
-def get_log_loss(evidences, evidence_a, target, epoch_num, num_classes, annealing_step, gamma, device):
-    target = F.one_hot(target, num_classes)
-    alpha_a = evidence_a + 1
-    loss_acc = edl_log_loss(alpha_a, target, epoch_num, num_classes, annealing_step, device)
-    for v in range(len(evidences)):
-        alpha = evidences[v] + 1
-        loss_acc += edl_log_loss(alpha, target, epoch_num, num_classes, annealing_step, device)
-    loss_acc = loss_acc / (len(evidences) + 1)
-    loss = loss_acc + gamma * get_dc_loss(evidences, device)
-
-    return loss
-
-
-#多任务学习的损失函数，结果模型不收敛了
-def get_loss1(evidences, evidence_a, target,target_T,target_A,target_V, epoch_num, num_classes, annealing_step, gamma, device):
-
-    t=target
-    tt=target_T
-    ta=target_A
-    tv=target_V
-
-    target = F.one_hot(target, num_classes)
-    target_T = F.one_hot(target_T,num_classes)
-    target_A = F.one_hot(target_A, num_classes)
-    target_V = F.one_hot(target_V, num_classes)
-
-    alpha_a = evidence_a + 1
-    loss_acc = edl_digamma_loss(alpha_a, target, epoch_num, num_classes, annealing_step, device)
-    #loss_acc = edl_mse_loss(alpha_a, target, epoch_num, num_classes, annealing_step, device)
-
-    alpha_t=evidences[0]+1
-    alpha_a=evidences[1]+1
-    alpha_v=evidences[2]+1
-
-    loss_acc += edl_digamma_loss(alpha_t, target_T, epoch_num, num_classes, annealing_step, device)
-    loss_acc += edl_digamma_loss(alpha_a, target_A, epoch_num, num_classes, annealing_step, device)
-    loss_acc += edl_digamma_loss(alpha_v, target_V, epoch_num, num_classes, annealing_step, device)
-
-    loss_acc = loss_acc / (len(evidences) + 1)
-    loss = loss_acc + gamma * get_dc_loss(evidences, device)
-
     return loss

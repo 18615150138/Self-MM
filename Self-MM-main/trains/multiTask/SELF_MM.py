@@ -84,6 +84,7 @@ class SELF_MM():
         bert_params_no_decay = [p for n, p in bert_params if any(nd in n for nd in bert_no_decay)]
         audio_params = [p for n, p in audio_params]
         video_params = [p for n, p in video_params]
+
         model_params_other = [p for n, p in list(model.Model.named_parameters()) if 'text_model' not in n and \
                                 'audio_model' not in n and 'video_model' not in n]
 

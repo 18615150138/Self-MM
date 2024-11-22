@@ -19,10 +19,12 @@ class MMDataset(Dataset):
             'mosi': self.__init_mosi,
             'mosei': self.__init_mosei,
             'sims': self.__init_sims,
+            'simsv2': self.__init_simsv2,
         }
         DATA_MAP[args.datasetName]()
 
     def __init_mosi(self):
+        #print('dataPath',self.args.dataPath)
         with open(self.args.dataPath, 'rb') as f:
             data = pickle.load(f)
         if self.args.use_bert:
@@ -34,11 +36,17 @@ class MMDataset(Dataset):
         self.rawText = data[self.mode]['raw_text']
         self.ids = data[self.mode]['id']
 
+        #print('开始取标签了',self.mode,self.args.train_mode)
+        # self.labels = {
+        #     'M': data[self.mode][self.args.train_mode + '_labels_new'].astype(np.float32)
+        # }
+
         self.labels = {
             'M': data[self.mode][self.args.train_mode+'_labels'].astype(np.float32)
         }
         if self.args.datasetName == 'sims':
             for m in "TAV":
+                print('m:',m)
                 self.labels[m] = data[self.mode][self.args.train_mode+'_labels_'+m]
 
         logger.info(f"{self.mode} samples: {self.labels['M'].shape}")
@@ -55,6 +63,9 @@ class MMDataset(Dataset):
         return self.__init_mosi()
 
     def __init_sims(self):
+        return self.__init_mosi()
+
+    def __init_simsv2(self):
         return self.__init_mosi()
 
     def __truncated(self):

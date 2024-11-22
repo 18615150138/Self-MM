@@ -21,7 +21,7 @@ class BertTextEncoder(nn.Module):
         super(BertTextEncoder, self).__init__()
 
         assert language in ['en', 'cn']
-
+        print('language', language)
         tokenizer_class = BertTokenizer
         model_class = BertModel
         # directory is fine
@@ -29,13 +29,15 @@ class BertTextEncoder(nn.Module):
         if language == 'en':
             # self.tokenizer = tokenizer_class.from_pretrained('pretrained_model/bert_en', do_lower_case=True)
             # self.model = model_class.from_pretrained('pretrained_model/bert_en')
+            print('language: bert-base-uncased')
             self.tokenizer = tokenizer_class.from_pretrained('bert-base-uncased', do_lower_case=True)
             self.model = model_class.from_pretrained('bert-base-uncased')
         elif language == 'cn':
             # self.tokenizer = tokenizer_class.from_pretrained('pretrained_model/bert_cn')
             # self.model = model_class.from_pretrained('pretrained_model/bert_cn')
-            self.tokenizer = tokenizer_class.from_pretrained('bert-base-uncased')
-            self.model = model_class.from_pretrained('bert-base-uncased')
+            print('language: bert-base-chinese')
+            self.tokenizer = tokenizer_class.from_pretrained('bert-base-chinese')
+            self.model = model_class.from_pretrained('bert-base-chinese')
         
         self.use_finetune = use_finetune
     
