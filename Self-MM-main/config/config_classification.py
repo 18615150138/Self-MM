@@ -3,7 +3,7 @@ import argparse
 
 from utils.functions import Storage
 
-class ConfigRegression():
+class ConfigRegression_c():
     def __init__(self, args):
         # hyper parameters for models
         HYPER_MODEL_MAP = {
@@ -152,13 +152,14 @@ class ConfigRegression():
                     'post_text_dropout': 0.2,
                     'post_audio_dropout': 0.2,
                     'post_video_dropout': 0.2,
+                    'grad_clip': 1.0,
                     # res
                     'H': 3.0
                 },
                 'mosei':{
                     # the batch_size of each epoch is update_epochs * batch_size
-                    #'batch_size': 32,
-                    'batch_size': 64,
+                    'batch_size': 16,
+                    #'batch_size': 64,
                     'learning_rate_bert': 5e-5,
                     'learning_rate_audio': 1e-3,
                     'learning_rate_video': 1e-4,
@@ -190,6 +191,7 @@ class ConfigRegression():
                     'post_text_dropout': 0.2,
                     'post_audio_dropout': 0.2,
                     'post_video_dropout': 0.2,
+                    'grad_clip': 1.0,
                     # res
                     'H': 3.0
                 },
@@ -225,6 +227,7 @@ class ConfigRegression():
                     'post_text_dropout': 0.2,
                     'post_audio_dropout': 0.2,
                     'post_video_dropout': 0.2,
+                    'grad_clip':1.0,
                     # res
                     'H': 1.0
                 },
@@ -260,6 +263,7 @@ class ConfigRegression():
                     'post_text_dropout': 0.2,
                     'post_audio_dropout': 0.2,
                     'post_video_dropout': 0.2,
+                    'grad_clip': 1.0,
                     # res
                     'H': 1.0
                 },

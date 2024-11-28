@@ -119,7 +119,7 @@ class SELF_MM_copy(nn.Module):
         # v=video_h
         #
         # X=[t,a,v]
-        X =[text,audio,video]
+        X =[text,audio,video] #(32,768) (32,16) (32,32)
         evidences=dict()
         for v in range(self.num_views):
             evidences[v]=self.EvidenceCollectors[v](X[v])

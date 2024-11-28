@@ -46,7 +46,7 @@ class MMDataset(Dataset):
         }
         if self.args.datasetName == 'sims':
             for m in "TAV":
-                print('m:',m)
+                #print('m:',m)
                 self.labels[m] = data[self.mode][self.args.train_mode+'_labels_'+m]
 
         logger.info(f"{self.mode} samples: {self.labels['M'].shape}")

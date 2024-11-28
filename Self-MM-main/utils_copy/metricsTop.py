@@ -10,6 +10,7 @@ __all__ = ['MetricsTop']
 class MetricsTop():
     def __init__(self, train_mode):
         if train_mode == "classification":
+            print('metrics classification!')
             self.metrics_dict = {
                 'MOSI': self.__eval_mosi_classification,
                 'MOSEI': self.__eval_mosei_classification,

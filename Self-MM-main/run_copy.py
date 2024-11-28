@@ -14,8 +14,8 @@ from models_copy.AMIO import AMIO
 from trains_copy.ATIO import ATIO
 from data.load_data import MMDataLoader
 from config.config_tune import ConfigTune
-from config.config_classification import ConfigRegression
-
+from config.config_classification import ConfigRegression_c
+from config.config_regression import ConfigRegression_r
 
 
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
@@ -96,7 +96,7 @@ def run(args):
     model.to(device)
 
     print('开始预测')
-    test_acc_max=atio.do_test(model,dataloader)
+    test_acc_max=atio.do_test(model,dataloader['test'])
     print('预测结束',test_acc_max)
     # 清理资源 删除模型对象，清空CUDA缓存并手动触发垃圾回收。
     del model
@@ -117,8 +117,9 @@ def run_normal(args):
         args = init_args
         # load config
         if args.train_mode == "classification":
-            config = ConfigRegression(args)
-
+            config = ConfigRegression_c(args)
+        elif args.train_mode == "regression":
+            config = ConfigRegression_r(args)
         args = config.get_config()
         print('args.dataPath',args.dataPath)
         setup_seed(seed)
@@ -226,7 +227,7 @@ if __name__ == '__main__':
 
     args = parse_args()
     logger = set_log(args)
-    for data_name in ['sims']:
+    for data_name in ['mosei']:
         args.datasetName = data_name
         args.seeds = [1111]
         #args.seeds = [1111,1112, 1113, 1114, 1115]

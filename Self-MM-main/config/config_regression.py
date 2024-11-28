@@ -3,7 +3,7 @@ import argparse
 
 from utils.functions import Storage
 
-class ConfigRegression():
+class ConfigRegression_r():
     def __init__(self, args):
         # hyper parameters for models
         HYPER_MODEL_MAP = {

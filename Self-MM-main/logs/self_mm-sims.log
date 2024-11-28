@@ -6192,3 +6192,184 @@
 2024-11-22 11:03:55:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
 2024-11-22 11:03:55:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
 2024-11-22 11:03:56:INFO:The model has 102474139 trainable parameters
+2024-11-28 14:43:23:INFO:Start running self_mm...
+2024-11-28 14:43:23:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'H': 1.0, 'seed': 1111}>
+2024-11-28 14:43:23:INFO:Let's use 1 GPUs!
+2024-11-28 14:43:30:INFO:train samples: (1368,)
+2024-11-28 14:43:30:INFO:valid samples: (456,)
+2024-11-28 14:43:30:INFO:test samples: (457,)
+2024-11-28 14:43:31:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 14:43:31:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 14:43:31:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 14:43:32:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 14:43:54:INFO:The model has 102474139 trainable parameters
+2024-11-28 15:41:01:INFO:Start running self_mm...
+2024-11-28 15:41:01:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 1.0, 'seed': 1111}>
+2024-11-28 15:41:01:INFO:Let's use 1 GPUs!
+2024-11-28 15:41:09:INFO:train samples: (1368,)
+2024-11-28 15:41:09:INFO:valid samples: (456,)
+2024-11-28 15:41:10:INFO:test samples: (457,)
+2024-11-28 15:41:10:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 15:41:10:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 15:41:11:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:41:11:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:41:12:INFO:The model has 102474139 trainable parameters
+2024-11-28 15:42:03:INFO:Start running self_mm...
+2024-11-28 15:42:03:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 1.0, 'seed': 1111}>
+2024-11-28 15:42:03:INFO:Let's use 1 GPUs!
+2024-11-28 15:42:04:INFO:train samples: (1368,)
+2024-11-28 15:42:04:INFO:valid samples: (456,)
+2024-11-28 15:42:05:INFO:test samples: (457,)
+2024-11-28 15:42:05:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 15:42:05:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 15:42:05:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:42:06:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:42:07:INFO:The model has 102474139 trainable parameters
+2024-11-28 15:43:19:INFO:Start running self_mm...
+2024-11-28 15:43:19:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 1.0, 'seed': 1111}>
+2024-11-28 15:43:19:INFO:Let's use 1 GPUs!
+2024-11-28 15:43:20:INFO:train samples: (1368,)
+2024-11-28 15:43:20:INFO:valid samples: (456,)
+2024-11-28 15:43:20:INFO:test samples: (457,)
+2024-11-28 15:43:21:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 15:43:21:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 15:43:21:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:43:21:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:43:23:INFO:The model has 102474139 trainable parameters
+2024-11-28 15:56:19:INFO:Start running self_mm...
+2024-11-28 15:56:19:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 1.0, 'seed': 1111}>
+2024-11-28 15:56:19:INFO:Let's use 1 GPUs!
+2024-11-28 15:56:26:INFO:train samples: (1368,)
+2024-11-28 15:56:26:INFO:valid samples: (456,)
+2024-11-28 15:56:26:INFO:test samples: (457,)
+2024-11-28 15:56:27:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 15:56:36:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 15:56:37:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:56:42:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:56:43:INFO:The model has 102474139 trainable parameters
+2024-11-28 15:57:44:INFO:Start running self_mm...
+2024-11-28 15:57:44:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 1.0, 'seed': 1111}>
+2024-11-28 15:57:44:INFO:Let's use 1 GPUs!
+2024-11-28 15:57:45:INFO:train samples: (1368,)
+2024-11-28 15:57:45:INFO:valid samples: (456,)
+2024-11-28 15:57:45:INFO:test samples: (457,)
+2024-11-28 15:57:46:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 15:57:46:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 15:57:46:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:57:46:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 15:57:48:INFO:The model has 102474139 trainable parameters
+2024-11-28 15:57:56:INFO:TRAIN-(self_mm) (1/1/1)>> loss: 1.1428 
+2024-11-28 16:00:40:INFO:Start running self_mm...
+2024-11-28 16:00:40:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 1.0, 'seed': 1111}>
+2024-11-28 16:00:40:INFO:Let's use 1 GPUs!
+2024-11-28 16:00:40:INFO:train samples: (1368,)
+2024-11-28 16:00:40:INFO:valid samples: (456,)
+2024-11-28 16:00:41:INFO:test samples: (457,)
+2024-11-28 16:00:41:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 16:00:42:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 16:00:42:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 16:00:42:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 16:00:43:INFO:The model has 102474139 trainable parameters
+2024-11-28 16:00:51:INFO:TRAIN-(False) [1/1/1] >> loss: 1.1428  Has0_acc_2: 0.6272  Has0_F1_score: 0.6416  Non0_acc_2: 0.4220  Non0_F1_score: 0.4565  Acc_3: 0.4868  F1_score_3: 0.5111 
+2024-11-28 16:00:52:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:00:INFO:TRAIN-(False) [1/2/1] >> loss: 1.1144  Has0_acc_2: 0.7354  Has0_F1_score: 0.7450  Non0_acc_2: 0.5056  Non0_F1_score: 0.5291  Acc_3: 0.6667  F1_score_3: 0.6774 
+2024-11-28 16:01:01:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:08:INFO:TRAIN-(False) [2/3/1] >> loss: 1.1008  Has0_acc_2: 0.7953  Has0_F1_score: 0.8023  Non0_acc_2: 0.5616  Non0_F1_score: 0.5732  Acc_3: 0.7690  F1_score_3: 0.7755 
+2024-11-28 16:01:09:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:16:INFO:TRAIN-(False) [3/4/1] >> loss: 1.0964  Has0_acc_2: 0.8311  Has0_F1_score: 0.8370  Non0_acc_2: 0.5891  Non0_F1_score: 0.5988  Acc_3: 0.8428  F1_score_3: 0.8470 
+2024-11-28 16:01:17:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:24:INFO:TRAIN-(False) [4/5/1] >> loss: 1.0912  Has0_acc_2: 0.8735  Has0_F1_score: 0.8776  Non0_acc_2: 0.6150  Non0_F1_score: 0.6200  Acc_3: 0.9240  F1_score_3: 0.9243 
+2024-11-28 16:01:25:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:32:INFO:TRAIN-(False) [5/6/1] >> loss: 1.0916  Has0_acc_2: 0.8940  Has0_F1_score: 0.8971  Non0_acc_2: 0.6262  Non0_F1_score: 0.6275  Acc_3: 0.9620  F1_score_3: 0.9622 
+2024-11-28 16:01:32:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:39:INFO:TRAIN-(False) [6/7/1] >> loss: 1.0963  Has0_acc_2: 0.9035  Has0_F1_score: 0.9061  Non0_acc_2: 0.6322  Non0_F1_score: 0.6301  Acc_3: 0.9678  F1_score_3: 0.9680 
+2024-11-28 16:01:40:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:47:INFO:TRAIN-(False) [7/8/1] >> loss: 1.1005  Has0_acc_2: 0.9167  Has0_F1_score: 0.9189  Non0_acc_2: 0.6331  Non0_F1_score: 0.6339  Acc_3: 0.9876  F1_score_3: 0.9876 
+2024-11-28 16:01:48:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:01:55:INFO:TRAIN-(False) [8/9/1] >> loss: 1.1051  Has0_acc_2: 0.9203  Has0_F1_score: 0.9223  Non0_acc_2: 0.6348  Non0_F1_score: 0.6348  Acc_3: 0.9868  F1_score_3: 0.9868 
+2024-11-28 16:01:56:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:05:09:INFO:Start running self_mm...
+2024-11-28 16:05:09:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'sims', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\SIMS/unaligned_39.pkl', 'seq_lens': (39, 400, 55), 'feature_dims': (768, 33, 709), 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 1.0, 'seed': 1111}>
+2024-11-28 16:05:09:INFO:Let's use 1 GPUs!
+2024-11-28 16:05:10:INFO:train samples: (1368,)
+2024-11-28 16:05:10:INFO:valid samples: (456,)
+2024-11-28 16:05:10:INFO:test samples: (457,)
+2024-11-28 16:05:11:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 16:05:11:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 16:05:11:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 16:05:11:DEBUG:https://huggingface.co:443 "HEAD /bert-base-chinese/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 16:05:13:INFO:The model has 102474139 trainable parameters
+2024-11-28 16:05:20:INFO:TRAIN-(False) [1/1/1] >> loss: 1.1428  Has0_acc_2: 0.6272  Has0_F1_score: 0.6416  Non0_acc_2: 0.4220  Non0_F1_score: 0.4565  Acc_3: 0.4868  F1_score_3: 0.5111 
+2024-11-28 16:05:21:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:05:29:INFO:TRAIN-(False) [1/2/1] >> loss: 1.1144  Has0_acc_2: 0.7354  Has0_F1_score: 0.7450  Non0_acc_2: 0.5056  Non0_F1_score: 0.5291  Acc_3: 0.6667  F1_score_3: 0.6774 
+2024-11-28 16:05:30:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:05:37:INFO:TRAIN-(False) [2/3/1] >> loss: 1.1008  Has0_acc_2: 0.7953  Has0_F1_score: 0.8023  Non0_acc_2: 0.5616  Non0_F1_score: 0.5732  Acc_3: 0.7690  F1_score_3: 0.7755 
+2024-11-28 16:05:37:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:05:44:INFO:TRAIN-(False) [3/4/1] >> loss: 1.0964  Has0_acc_2: 0.8311  Has0_F1_score: 0.8370  Non0_acc_2: 0.5891  Non0_F1_score: 0.5988  Acc_3: 0.8428  F1_score_3: 0.8470 
+2024-11-28 16:05:45:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:05:52:INFO:TRAIN-(False) [4/5/1] >> loss: 1.0912  Has0_acc_2: 0.8735  Has0_F1_score: 0.8776  Non0_acc_2: 0.6150  Non0_F1_score: 0.6200  Acc_3: 0.9240  F1_score_3: 0.9243 
+2024-11-28 16:05:53:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:06:00:INFO:TRAIN-(False) [5/6/1] >> loss: 1.0916  Has0_acc_2: 0.8940  Has0_F1_score: 0.8971  Non0_acc_2: 0.6262  Non0_F1_score: 0.6275  Acc_3: 0.9620  F1_score_3: 0.9622 
+2024-11-28 16:06:01:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:06:08:INFO:TRAIN-(False) [6/7/1] >> loss: 1.0963  Has0_acc_2: 0.9035  Has0_F1_score: 0.9061  Non0_acc_2: 0.6322  Non0_F1_score: 0.6301  Acc_3: 0.9678  F1_score_3: 0.9680 
+2024-11-28 16:06:08:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:06:15:INFO:TRAIN-(False) [7/8/1] >> loss: 1.1005  Has0_acc_2: 0.9167  Has0_F1_score: 0.9189  Non0_acc_2: 0.6331  Non0_F1_score: 0.6339  Acc_3: 0.9876  F1_score_3: 0.9876 
+2024-11-28 16:06:16:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:06:23:INFO:TRAIN-(False) [8/9/1] >> loss: 1.1051  Has0_acc_2: 0.9203  Has0_F1_score: 0.9223  Non0_acc_2: 0.6348  Non0_F1_score: 0.6348  Acc_3: 0.9868  F1_score_3: 0.9868 
+2024-11-28 16:06:24:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:06:25:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:06:25:INFO:Results are added to results_copy/results\normals\sims-classification.csv...
+2024-11-28 16:11:22:INFO:Start running self_mm...
+2024-11-28 16:11:22:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'mosi', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\MOSI/Processed/unaligned_50.pkl', 'seq_lens': (50, 50, 50), 'feature_dims': (768, 5, 20), 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.0001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.001, 'weight_decay_video': 0.001, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 32, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 32, 'post_fusion_dropout': 0.2, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 3.0, 'seed': 1111}>
+2024-11-28 16:11:22:INFO:Let's use 1 GPUs!
+2024-11-28 16:11:25:INFO:train samples: (1284,)
+2024-11-28 16:11:25:INFO:valid samples: (229,)
+2024-11-28 16:11:25:INFO:test samples: (686,)
+2024-11-28 16:11:25:DEBUG:Starting new HTTPS connection (1): huggingface.co:443
+2024-11-28 16:11:26:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-11-28 16:11:30:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 16:11:30:DEBUG:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/11" 200 0
+2024-11-28 16:11:32:INFO:The model has 109514331 trainable parameters
+2024-11-28 16:11:40:INFO:TRAIN-(False) [1/1/1] >> loss: 1.1723  Has0_acc_2: 0.5763  Has0_F1_score: 0.5762  Non0_acc_2: 0.2453  Non0_F1_score: 0.2412  Acc_3: 0.3785  F1_score_3: 0.4392 
+2024-11-28 16:11:41:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:11:49:INFO:TRAIN-(False) [1/2/1] >> loss: 1.1442  Has0_acc_2: 0.7188  Has0_F1_score: 0.7191  Non0_acc_2: 0.3379  Non0_F1_score: 0.3194  Acc_3: 0.4868  F1_score_3: 0.5583 
+2024-11-28 16:11:50:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:11:57:INFO:TRAIN-(False) [2/3/1] >> loss: 1.1383  Has0_acc_2: 0.8170  Has0_F1_score: 0.8171  Non0_acc_2: 0.3842  Non0_F1_score: 0.3676  Acc_3: 0.6005  F1_score_3: 0.6743 
+2024-11-28 16:11:58:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:05:INFO:TRAIN-(False) [3/4/1] >> loss: 1.1338  Has0_acc_2: 0.8520  Has0_F1_score: 0.8521  Non0_acc_2: 0.3899  Non0_F1_score: 0.3813  Acc_3: 0.6511  F1_score_3: 0.7184 
+2024-11-28 16:12:06:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:13:INFO:TRAIN-(False) [4/5/1] >> loss: 1.1361  Has0_acc_2: 0.8769  Has0_F1_score: 0.8769  Non0_acc_2: 0.4013  Non0_F1_score: 0.3949  Acc_3: 0.6877  F1_score_3: 0.7498 
+2024-11-28 16:12:14:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:21:INFO:TRAIN-(False) [5/6/1] >> loss: 1.1402  Has0_acc_2: 0.8808  Has0_F1_score: 0.8808  Non0_acc_2: 0.4029  Non0_F1_score: 0.3972  Acc_3: 0.7251  F1_score_3: 0.7783 
+2024-11-28 16:12:22:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:29:INFO:TRAIN-(False) [6/7/1] >> loss: 1.1426  Has0_acc_2: 0.9026  Has0_F1_score: 0.9026  Non0_acc_2: 0.4159  Non0_F1_score: 0.4078  Acc_3: 0.7492  F1_score_3: 0.8027 
+2024-11-28 16:12:30:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:37:INFO:TRAIN-(False) [7/8/1] >> loss: 1.1471  Has0_acc_2: 0.9050  Has0_F1_score: 0.9050  Non0_acc_2: 0.4216  Non0_F1_score: 0.4087  Acc_3: 0.7812  F1_score_3: 0.8230 
+2024-11-28 16:12:38:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:45:INFO:TRAIN-(False) [8/9/1] >> loss: 1.1529  Has0_acc_2: 0.8847  Has0_F1_score: 0.8847  Non0_acc_2: 0.4062  Non0_F1_score: 0.4004  Acc_3: 0.7780  F1_score_3: 0.8155 
+2024-11-28 16:12:46:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:47:INFO:VAL-(self_mm) >> loss: 0.0000 
+2024-11-28 16:12:47:INFO:Results are added to results_copy/results\normals\mosi-classification.csv...
+2024-11-28 16:14:12:INFO:Start running self_mm...
+2024-11-28 16:14:12:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'mosei', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\MOSEI/unaligned_new.pkl', 'seq_lens': (50, 500, 375), 'feature_dims': (768, 74, 35), 'train_samples': 10620, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.01, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.01, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 32, 'post_audio_dim': 16, 'post_video_dim': 16, 'post_fusion_dropout': 0.2, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 3.0, 'seed': 1111}>
+2024-11-28 16:14:12:INFO:Let's use 1 GPUs!
+2024-11-28 16:20:35:INFO:Start running self_mm...
+2024-11-28 16:20:35:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'mosei', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\MOSEI/unaligned_new.pkl', 'seq_lens': (50, 500, 375), 'feature_dims': (768, 74, 35), 'train_samples': 10620, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.01, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.01, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 32, 'post_audio_dim': 16, 'post_video_dim': 16, 'post_fusion_dropout': 0.2, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 3.0, 'seed': 1111}>
+2024-11-28 16:20:35:INFO:Let's use 1 GPUs!
+2024-11-28 16:21:31:INFO:train samples: (10620,)
+2024-11-28 16:22:24:INFO:valid samples: (1299,)
+2024-11-28 16:24:05:INFO:Start running self_mm...
+2024-11-28 16:24:05:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'mosei', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\MOSEI/unaligned_new.pkl', 'seq_lens': (50, 500, 375), 'feature_dims': (768, 74, 35), 'train_samples': 10620, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 32, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.01, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.01, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 32, 'post_audio_dim': 16, 'post_video_dim': 16, 'post_fusion_dropout': 0.2, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 3.0, 'seed': 1111}>
+2024-11-28 16:24:05:INFO:Let's use 1 GPUs!
+2024-11-28 16:24:58:INFO:train samples: (10620,)
+2024-11-28 16:25:52:INFO:valid samples: (1299,)
+2024-11-28 16:27:35:INFO:Start running self_mm...
+2024-11-28 16:27:35:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'mosei', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\MOSEI/unaligned_new.pkl', 'seq_lens': (50, 500, 375), 'feature_dims': (768, 74, 35), 'train_samples': 10620, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 16, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.01, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.01, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 32, 'post_audio_dim': 16, 'post_video_dim': 16, 'post_fusion_dropout': 0.2, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 3.0, 'seed': 1111}>
+2024-11-28 16:27:35:INFO:Let's use 1 GPUs!
+2024-11-28 16:28:29:INFO:train samples: (10620,)
+2024-11-28 16:29:22:INFO:valid samples: (1299,)
+2024-11-28 16:31:24:INFO:Start running self_mm...
+2024-11-28 16:31:24:INFO:<Storage{'is_tune': False, 'train_mode': 'classification', 'modelName': 'self_mm', 'datasetName': 'mosei', 'num_workers': 0, 'model_save_dir': 'results_copy/models', 'res_save_dir': 'results_copy/results\\normals', 'gpu_ids': [0], 'annealing_step': 20, 'gamma': 1, 'epochs': 100, 'seeds': [1111], 'dataPath': 'E:\\yanyi\\code of paper\\Self-MM-main\\Self-MM-main\\Dataset\\MOSEI/unaligned_new.pkl', 'seq_lens': (50, 500, 375), 'feature_dims': (768, 74, 35), 'train_samples': 10620, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.001, 'learning_rate_video': 0.0001, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.01, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.01, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 32, 'a_lstm_dropout': 0.2, 'v_lstm_dropout': 0.2, 't_bert_dropout': 0.2, 'post_fusion_dim': 128, 'post_text_dim': 32, 'post_audio_dim': 16, 'post_video_dim': 16, 'post_fusion_dropout': 0.2, 'post_text_dropout': 0.2, 'post_audio_dropout': 0.2, 'post_video_dropout': 0.2, 'grad_clip': 1.0, 'H': 3.0, 'seed': 1111}>
+2024-11-28 16:31:24:INFO:Let's use 1 GPUs!
+2024-11-28 16:32:17:INFO:train samples: (10620,)
+2024-11-28 16:33:11:INFO:valid samples: (1299,)
